@@ -1,0 +1,32 @@
+//===========================================
+// -Variables start
+//===========================================
+
+// Colors start
+
+// define your vars or override bootstrap vars
+$default: #ffffffad;
+$primary: green;
+$secondary: blue;
+$alternate: black;
+$alternate-text-color: #82040af2;
+$bg-dark: #0e0e0e;
+
+// Typography Family
+$font-default: "Roboto", sans-serif;
+$font-primery: "Montserrat", sans-serif;
+
+$font-path: "../fonts";
+
+// define your Break Points or override bootstrap Break Points
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// ===========================================
+// -Variables end
+// ===========================================

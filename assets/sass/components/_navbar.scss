@@ -1,0 +1,156 @@
+//===========================================
+// -Navbar start
+//===========================================
+.nav-sticky {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: $bg-dark;
+    color: $default;
+
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 25px 20px;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+
+        li {
+            margin: 0 20px;
+        }
+
+        .humburger {
+            background-color: $bg-dark;
+            color: $default;
+            box-shadow: -1px 6px 16px rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 23px;
+            cursor: pointer;
+
+            span {
+                margin: 5px 0;
+                display: block;
+                height: 4px;
+                background-color: $default;
+                transition: 500ms;
+            }
+
+            span:nth-child(1) {
+                width: 33px;
+            }
+
+            span:nth-child(2) {
+                width: 25px;
+            }
+
+            span:nth-child(3) {
+                width: 20px;
+            }
+        }
+
+        .humburger2 {
+
+
+            span:nth-child(1) {
+                transform: rotate(45deg);
+                position: relative;
+                top: 9px;
+                width: 33px;
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+                width: 33px;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+                position: relative;
+                top: -9px;
+                width: 33px;
+            }
+        }
+    }
+}
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: #0e0e0eeb;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 27%;
+    align-items: center;
+    clip-path: circle(0px);
+    transition: 500ms;
+
+    &.side-active {
+        clip-path: circle(1000px);
+
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+
+            .links {
+                font-size: rem(25);
+                text-decoration: none;
+                color: $default;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: -6px;
+                    top: 8px;
+                    width: 30px;
+                    z-index: -1;
+                    height: 30px;
+                    background-color: #a0a0a073;
+                    clip-path: circle(12px);
+                    transition: 100ms;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                        right: -11px;
+                        top: 0px;
+                        clip-path: circle(13px);
+                    }
+                    span {
+                        margin-right: 45px;
+                    }
+                }
+
+                span {
+                    width: 40px;
+                    height: 2px;
+                    display: inline-block;
+                    background-color: #a0a0a0;
+                    margin-right: 30px;
+                    transition: 300ms;
+                }
+            }
+        }
+    }
+
+}
+
+//===========================================
+// -Navbar end
+//===========================================

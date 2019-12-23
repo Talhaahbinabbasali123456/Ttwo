@@ -1,0 +1,456 @@
+//===========================================
+// -Home Page start
+//===========================================
+.FAQ {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-dark;
+
+    .container {
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            // margin-top: -75px;
+            .cardbox-wrapper {
+                background-color: $bg-dark;
+                color: $default;
+                margin: 18px;
+                height: 50vh;
+                max-width: 30%;
+                min-width: 300px;
+                padding: 5px 10px 65px 10px;
+                position: relative;
+                cursor: pointer;
+                transition: 1s;
+
+                &:hover {
+                    h6 {
+                        border-bottom: 1px solid gray;
+
+                        &::after {
+                            top: -7px;
+                            width: 70px;
+                            clip-path: circle(38px);
+                            opacity: 1;
+
+                        }
+                    }
+                }
+
+                h6 {
+                    position: relative;
+                    transform: rotate(-90deg);
+                    left: -59%;
+                    top: 69%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    border-bottom: 1px solid transparent;
+
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        width: 30px;
+                        height: 30px;
+                        margin-left: -12px;
+                        background-color: #fbfbfdb5;
+                        clip-path: circle(5px);
+                        transition: 1s;
+                        opacity: 0;
+
+                    }
+                }
+
+                .card-box {
+                    height: 100%;
+                    overflow: hidden;
+
+
+
+                    img {
+                        height: 200px;
+                    }
+
+                    p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+
+                    .clickme {
+                        z-index: 9;
+                        position: absolute;
+                        bottom: 2px;
+                        right: 1.5px;
+                        display: -ms-flexbox;
+                        display: flex;
+                        background-size: 40%;
+                        background-position: center;
+                        clip-path: circle(25px);
+                        background-repeat: no-repeat;
+                        background-image: url(../images/pointer.png);
+                        background-blend-mode: darken;
+                        background-color: white;
+                        color: $alternate;
+                        width: 20%;
+                        height: 15%;
+                        justify-content: center;
+                        align-items: flex-end;
+                        transform: rotate(360deg);
+                        transition: 1s;
+                        cursor: pointer;
+                    }
+
+                    .clickmebtnavtive {
+                        transform: rotate(0deg);
+                    }
+
+
+
+                    .hidden-box {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $bg-dark;
+                        clip-path: circle(0px);
+                        transition: 1s;
+                        padding: 5px 10px 65px 10px;
+
+                        p {
+                            color: white;
+                            margin-top: 5px;
+                            padding: 10px 0px;
+                            font-size: rem(14);
+                            max-height: 95%;
+                            overflow: auto;
+                            text-overflow: initial;
+                            white-space: normal;
+                        }
+                    }
+
+                    .hidden-box-show {
+                        right: 0px;
+                        bottom: 0px;
+                        width: 100%;
+                        height: 100%;
+                        clip-path: circle(100%);
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+.about {
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    padding: 150px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background: url(../images/cool1.jpg) no-repeat, white;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity;
+
+    &::before {
+        overflow: hidden;
+        content: "";
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        z-index: -1;
+        width: 60%;
+        height: 100%;
+        background-color: $bg-dark;
+        transition: 1s;
+        box-shadow: -1px 6px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    .jumbotron {
+        background-color: transparent;
+
+        p {
+            font-size: rem(22);
+            color: $default;
+        }
+    }
+}
+
+.project {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $bg-dark;
+
+    .container {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+
+            .column {
+                flex: 25%;
+                max-width: 25%;
+                padding: 0 4px;
+
+                /* Responsive layout - makes a two column-layout instead of four columns */
+                @media screen and (max-width: 800px) {
+                    flex: 50%;
+                    max-width: 50%;
+                }
+
+                /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 600px) {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+
+                .img-wrap {
+                    position: relative;
+                    transition: 5s;
+
+                    img {
+                        border: 5px double #ffffff;
+                        margin-top: 8px;
+                        vertical-align: middle;
+                        width: 100%;
+                        transition: 800ms;
+                        position: relative;
+                        filter: brightness(0.7);
+
+                    }
+
+                    .hoverable-quotes {
+                        padding: 15px;
+                        background: linear-gradient(to top, #e3e3e3, #ffffffb8);
+                        color: black;
+                        font-weight: 600;
+                        clip-path: circle(1px);
+                        position: absolute;
+                        transition: 800ms;
+                        bottom: 0;
+                        opacity: 0;
+                        height: 65%;
+                        overflow: auto;
+
+                    }
+
+                    &:hover img {
+                        filter: grayscale(1) blur(1px);
+
+                    }
+
+                    &:hover .hoverable-quotes {
+                        opacity: 1;
+                        width: 100%;
+                        clip-path: circle(300px);
+
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+
+}
+
+
+.Client {
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background: url(../images/cool1.jpg) no-repeat, white;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: luminosity;
+
+
+    &::before {
+        overflow: hidden;
+        content: "";
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 60%;
+        height: 100%;
+        background-color: $bg-dark;
+        transition: 1s;
+        box-shadow: -1px 6px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+        z-index: 1;
+
+        .client-wrapper {
+            z-index: 1;
+            min-height: 400px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+
+            .client-box {
+                min-height: 350px;
+                min-width: 295px;
+                width: 30%;
+                margin: 10px;
+                box-shadow: -1px 6px 16px rgba(0, 0, 0, 0.7);
+                background-color: #0e0e0ec7;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+
+                .img-wrapper {
+                    border-radius: 100%;
+                    padding: 5px;
+                    margin: 20px 5px;
+                    height: 75px;
+                    border: 1px solid white;
+                    width: 75px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+
+                    img {
+                        height: 60%;
+                    }
+                }
+            }
+
+            blockquote {
+                text-align: center;
+                color: $default;
+                position: relative;
+                z-index: 2;
+
+                &::before {
+                    position: absolute;
+                    top: -20px;
+                    left: 0px;
+                    content: "";
+                    height: 45px;
+                    background-size: 100%;
+                    background-image: url(../../assets/images/qoutes.png);
+                    width: 45px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    z-index: -1;
+                    opacity: 1;
+
+                }
+
+                &::after {
+                    position: absolute;
+                    bottom: -20px;
+                    right: 0px;
+                    content: "";
+                    height: 45px;
+                    background-size: 100%;
+                    background-image: url(../../assets/images/qoutes.png);
+                    width: 45px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    z-index: -1;
+                    opacity: 1;
+                    transform: rotate(180deg);
+
+                }
+            }
+        }
+    }
+}
+
+
+.contact {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $bg-dark;
+
+    .container {
+        .form-wrapper {
+            margin-left: auto;
+            width: fit-content;
+
+            input,
+            select {
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                border-bottom: 1px solid white;
+
+                &:focus {
+                    border-color: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes animatetestimonial {
+
+    0%,
+    100% {
+        right: 23%;
+    }
+
+    50% {
+        left: 23%;
+    }
+}
+
+
+
+//===========================================
+// -Home Page end
+//===========================================
